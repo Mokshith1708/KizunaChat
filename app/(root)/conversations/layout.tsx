@@ -19,7 +19,7 @@ const ConversationsLayout = ({children}: Props) => {
      <ItemList title='Conversations'>{
      conversations ? conversations.length ===0 ? <p className='w-full h-full flex items-center justify-center'>No conversations found</p> : conversations.map(conversations =>{
       return conversations.conversation.isGroup ? null : (
-        <DMConversationItem key={conversations.conversation._id} id={conversations.conversation._id} username={ conversations.otherMember?.username || ""} imageUrl={conversations.otherMember?.imageUrl || ""} />
+        <DMConversationItem key={conversations.conversation._id} id={conversations.conversation._id} username={ conversations.otherMember?.username || ""} imageUrl={conversations.otherMember?.imageUrl || ""} lastMessageContent={conversations.lastMessage?.content} lastMessageSender={conversations.lastMessage?.sender} />
       )
      }) : <Loader2/> }</ItemList>
      {children}
