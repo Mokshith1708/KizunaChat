@@ -36,10 +36,10 @@ export default defineSchema({
     conversationMembers :defineTable({
       memberId: v.id("users"),
       conversationId: v.id("conversations"),
-      lastSeenMeesage: v.optional(v.id("messages")),
+      lastSeenMessage: v.optional(v.id("messages")),
     }).index("by_memberId",["memberId"])
     .index("by_conversationId",["conversationId"])
-    .index("by_mamberId_conversationId",["memberId","conversationId"]),
+    .index("by_memberId_conversationId",["memberId","conversationId"]),
 
     messages : defineTable({
       senderId: v.id("users"),
