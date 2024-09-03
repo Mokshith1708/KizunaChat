@@ -55,7 +55,7 @@ const ConversationPage = ({params: {conversationId}}: Props) => {
     }
     options={conversation.isGroup?[{label: "Leave Group",destructive:false,onClick:()=>setLeaveGroupDialogOpen(true),},{label: "Delete Group",destructive:true,onClick:()=>setDeleteGroupDialogOpen(true),},]:[{label: "Remove friend",destructive:true,onClick:()=> setRemoveFriendDialogOpen(true),},]} 
     />
-    <Body />
+    <Body members={conversation.isGroup? conversation.otherMembers?conversation.otherMembers:[] : conversation.otherMember ? [conversation.otherMember]:[]}/>
     <ChatInput />
   </ConversationContainer>
   );

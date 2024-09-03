@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Id } from '@/convex/_generated/dataModel';
 import { User } from 'lucide-react';
@@ -12,12 +13,13 @@ type Props = {
     username: string;
     lastMessageSender?: string;
     lastMessageContent?: string;
+    unseenCount: number;
 }
 
-const DMConversationItem = ({id, imageUrl, username, lastMessageContent, lastMessageSender,}: Props) => {
+const DMConversationItem = ({id, imageUrl, username, lastMessageContent, lastMessageSender,unseenCount}: Props) => {
   return (
     <Link href={`/conversations/${id}`} className='w-full'>
-      <Card className='p-2 flex flex-row items-center gap-4 truncate'>
+      <Card className='p-2 flex flex-row items-center justify-between'>
         <div className='flex flex-row items-center gap-4 truncate'>
             <Avatar>
                 <AvatarImage src={imageUrl}/>
@@ -34,6 +36,7 @@ const DMConversationItem = ({id, imageUrl, username, lastMessageContent, lastMes
                 </p></span>:  <p className='text-sm text-muted-foreground truncate'>Start the conversation!</p>}
             </div>
         </div>
+        {unseenCount? <Badge>{unseenCount}</Badge>:null}
       </Card>
     </Link>
   )
