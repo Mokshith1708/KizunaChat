@@ -60,12 +60,12 @@ const handleInputChange = (event:any)=>{
   })
   }
   return (
-   <Card className=' max-w-[93%] w-full p-2 rounded-lg relative'><div className='flex gap-2 items-end w-full'>
+   <Card className=' max-w-[93%] w-full p-2 rounded-lg relative border-2 border-[#262ed1]'><div className='flex gap-2 items-end w-full'>
     <Form {...form}>
       ,
       <form
       onSubmit={form.handleSubmit(handleSubmit)}
-      className="flex gap-2 items-end w-full">
+      className="flex gap-2 items-end w-full ">
       <FormField control={form.control} name="content" render={({field})=>{
        return <FormItem className="h-full w-full">
          <FormControl>

@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import ChatBot from "@/components/ui/Chatbot";
 import { ThemeToggle } from "@/components/ui/theme/theme-toggle";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { useConversation } from "@/hooks/useConversation";
@@ -18,7 +19,7 @@ const MobileNav = () => {
     if(isActive) return (null);
 
   return (
-    <Card className="fixed bottom-4 w-[calc(100vw-32px)] flex items-center h-16 p-2 lg:hidden">
+    <Card className="fixed bottom-4 w-[calc(100vw-32px)] flex items-center h-16 p-2 lg:hidden bg-grey-gradient">
         <nav className="w-full">
             <ul className="flex justify-evenly items-center">
                 {
@@ -40,8 +41,9 @@ const MobileNav = () => {
                     </li>
                     );
                 })}
+                <ChatBot/>
                 <li>
-                    <ThemeToggle />
+                    {/* <ThemeToggle /> */}
                 </li>
                 <li>
                  <UserButton />

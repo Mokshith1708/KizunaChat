@@ -20,7 +20,7 @@ type Props = {
 
 const Header = ({imageUrl,name,options}: Props) => {
   return (
-    <Card className='w-full flex rounded-lg items-center p-2 justify-between'>
+    <Card className='w-full flex rounded-lg items-center p-2 justify-between bg-grey-darker '>
         <div className='flex items-center gap-2'>
             <Link href="/conversations"  className='block lg:hidden'>
             <CircleArrowLeft />
