@@ -73,7 +73,7 @@ const getSeenMessage = (messageId: Id<"messages">)=>{
 }
 
   return (
-    <div className='flex-1 w-full flex overflow-y-scroll flex-col-reverse gap-2 p-3 no-scrollbar'>{messages?.map(({message, senderImage, senderName, isCurrentUser}, index) => {
+    <div className='flex-1 w-full flex overflow-y-scroll flex-col-reverse gap-2 p-3 no-scrollbar ' style={{backgroundImage: "url('/HD-wallpaper-whatsapp-background-theme-thumbnail.jpg')"}}>{messages?.map(({message, senderImage, senderName, isCurrentUser}, index) => {
       const lastByUser = messages[index -1]?.message.senderId === messages[index].message.senderId;
   
      const seenMessage = isCurrentUser ? getSeenMessage(message._id):undefined

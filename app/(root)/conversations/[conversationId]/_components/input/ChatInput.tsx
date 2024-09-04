@@ -60,7 +60,7 @@ const handleInputChange = (event:any)=>{
   })
   }
   return (
-   <Card className='w-full p-2 rounded-lg relative'><div className='flex gap-2 items-end w-full'>
+   <Card className=' max-w-[93%] w-full p-2 rounded-lg relative'><div className='flex gap-2 items-end w-full'>
     <Form {...form}>
       ,
       <form
