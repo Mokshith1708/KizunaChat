@@ -97,42 +97,42 @@ KizunaChat, derived from 'kizuna' (connect or bond in Japanese), is a web-based 
    
    After signing up, you can log in using your email and password or Google account credentials.
 
-   ![alt text](image.png)
+   ![alt text](public/image.png)
 
 5. **Navigation Bar:**
    The navigation bar on the left side allows you to switch between friends and conversations, view user details, and log out.
-   ![alt text](image-7.png)
+   ![alt text](public/image-7.png)
 
 6. **Friends Page:**
    Add friends by entering their email addresses. Ensure the friend has a KizunaChat account. You can test this by opening another browser or using a different account.
-    ![alt text](image-1.png)
+    ![alt text](public/image-1.png)
 
 
 7. **Accept or Reject Friend Requests:**
    Manage friend requests on the Friends page. You will see requests and can accept or reject them accordingly.
-   ![alt text](image-2.png)
+   ![alt text](public/image-2.png)
 
 8. **Conversations:**
    View all friends and groups. Notifications for unread messages are indicated. Clicking on notifications takes you to the chat window.
-    ![alt text](image-3.png)
+    ![alt text](public/image-3.png)
 
 9. **Group Creation:**
    Create a new group by clicking the symbol in the top right corner of the Conversations page. Enter the necessary details and click "Create."
-   ![alt text](image-4.png)
+   ![alt text](public/image-4.png)
 
 10. **Chat Option:**
     Click on a person or group to open the chat window. You can view all messages with timestamps. Use the top bar for calling and settings options.
-    ![alt text](image-5.png)
-    ![alt text](image-6.png)
+    ![alt text](public/image-5.png)
+    ![alt text](public/image-6.png)
 
 
 11. **Chatbot:**
     Access the AI-powered chatbot by clicking the message symbol on the leftmost corner of the page. The chatbot can answer general questions.
-    ![alt text](image-8.png)
+    ![alt text](public/image-8.png)
 
 12. **Calling Feature:**
     Use the call option in the menu to initiate a call. Note that there is no notification system for incoming calls; both users need to manually join the call.
-    ![alt text](image-9.png)
+    ![alt text](public/image-9.png)
 
 ## System Design
 
