@@ -140,7 +140,7 @@ KizunaChat, derived from 'kizuna' (connect or bond in Japanese), is a web-based 
 
 ## System Design
 
-A comprehensive system design document is available in the [docs/SystemDesign.md](docs/SystemDesign.md). It includes architecture diagrams, component descriptions, and data flow.
+A comprehensive system design document is available in the "https://docs.google.com/document/d/1imuh2p28FgMgRqPqf3fA9aRJwHiRWutDjTvKh1gbLRw/edit?usp=sharing". It includes architecture diagrams, component descriptions, and data flow.
 
 ## Optional Features
 
