@@ -22,16 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange >
-       <ConvexClientProvider>
-       <TooltipProvider>{children}</TooltipProvider>
-       <Toaster richColors />
-       </ConvexClientProvider>
-       </ThemeProvider>
-        </body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ConvexClientProvider>
+            <TooltipProvider>{children}</TooltipProvider>
+            <Toaster richColors />
+          </ConvexClientProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

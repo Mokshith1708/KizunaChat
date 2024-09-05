@@ -1,23 +1,21 @@
 import { useMutation } from "convex/react";
-import { useState } from "react"
+import { useState } from "react";
 
-export const UseMutationState =
-(mutationToRun: any) =>
-{
-    const [pending, setPending] = useState(false);
-    const mutationFn = useMutation(mutationToRun)
+export const UseMutationState = (mutationToRun: any) => {
+  const [pending, setPending] = useState(false);
+  const mutationFn = useMutation(mutationToRun);
 
-   const mutate  = (payload: any) =>{
+  const mutate = (payload: any) => {
     setPending(true);
-   
+
     return mutationFn(payload)
-    .then((res) =>{
+      .then((res) => {
         return res;
-    })
-    .catch((error)=> {
+      })
+      .catch((error) => {
         throw error;
-    })
-    .finally(() => setPending(false));
-   };
-   return {mutate, pending};
+      })
+      .finally(() => setPending(false));
+  };
+  return { mutate, pending };
 };

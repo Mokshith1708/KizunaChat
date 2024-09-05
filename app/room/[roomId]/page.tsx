@@ -60,11 +60,11 @@ const RoomId = ({ params }: { params: IParams }) => {
           scenario: {
             mode: ZegoUIKitPrebuilt.GroupCall, // Use ZegoUIKitPrebuilt.OneONoneCall for 1-on-1 calls.
           },
-           showPreJoinView: false,
+          showPreJoinView: false,
           onLeaveRoom: () => {
             // router.replace(/conversations/${params.roomId})
             window.close();
-          }
+          },
         });
       }
     };
@@ -73,8 +73,7 @@ const RoomId = ({ params }: { params: IParams }) => {
   }, [params.roomId]);
 
   return (
-    <div ref={containerRef} style={{ width: "100vw", height: "100vh" }}>
-    </div>
+    <div ref={containerRef} style={{ width: "100vw", height: "100vh" }}></div>
   );
 };
 
