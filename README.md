@@ -1,4 +1,4 @@
-- Name: Tanguturi Mokshith Reddy
+### Name: Tanguturi Mokshith Reddy
 - University: Indian Institute of Technology Tirupati
 - Department: Computer Science and Engineering
 
