@@ -15,7 +15,7 @@ const ItemList = ({ children, title, action: Action }: Props) => {
     return (
         <Card 
             className={cn(
-                "h-full w-full p-2 rounded-r-lg rounded-l-none  border-2 border-white shadow-white-lg hover:border-white hover:shadow-white-2xl transition-shadow duration-300 ease-in-out", // Base classes
+                "h-full w-full p-2 rounded-r-lg rounded-l-none  border-2 border-white shadow-white-lg hover:border-yellow-500 hover:shadow-white-2xl transition-shadow duration-300 ease-in-out", // Base classes
                 {
                     "hidden lg:flex-none lg:w-80 lg:block": isActive, // Show on large screens if active
                     "block": !isActive // Show on all screens if not active

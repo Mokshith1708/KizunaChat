@@ -13,7 +13,7 @@ import Link from "next/dist/client/link";
 const DesktopNav = () => {
     const paths = useNavigation();
   return (
-    <Card className="hidden lg:flex lg:flex-col lg:justify-between lg:items-center lg:h-full lg:w-16 lg:px-2 lg:py-4 border-2 bg-grey-gradient border-white shadow-white-lg hover:border-white hover:shadow-white-2xl transition-shadow duration-300 ease-in-out rounded-r-none" style={{ border: '2px solid #ffffff', borderRight: 'none' }}>
+    <Card className="hidden lg:flex lg:flex-col lg:justify-between lg:items-center lg:h-full lg:w-16 lg:px-2 lg:py-4 border-2 bg-grey-gradient border-white shadow-white-lg hover:border-yellow-500 hover:shadow-white-2xl transition-shadow duration-300 ease-in-out rounded-r-none">
         <nav>
             <ul className="flex flex-col items-center gap-4">
                 {paths.map((path, id) => (
