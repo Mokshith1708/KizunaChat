@@ -7,6 +7,7 @@ import { api } from '@/convex/_generated/api';
 import { useQuery } from 'convex/react';
 import { Loader2 } from 'lucide-react';
 import Request from './_components/Request'
+import { BeatLoader } from 'react-spinners';
 
 type Props = {}
 
@@ -30,7 +31,7 @@ const requests = useQuery(api.requests.get)
           })
         )
        :
-      ( <Loader2 className='h-8 w-8' />
+      ( <BeatLoader color="#ffffff"  size={20} />
         )} </ItemList>
       <ConversationFallback />
     </>

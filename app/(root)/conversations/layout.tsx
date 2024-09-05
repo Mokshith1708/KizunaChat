@@ -8,6 +8,7 @@ import React from 'react'
 import DMConversationItem from './_components/DMConversationItem';
 import GroupConversationItem from './_components/GroupConversationItem';
 import CreateGroupDialogue from './_components/CreateGroupDialogue';
+import {ClipLoader} from 'react-spinners'
 
 
 type Props = React.PropsWithChildren<{}>
@@ -24,7 +25,7 @@ const ConversationsLayout = ({children}: Props) => {
       return conversations.conversation.isGroup ? (<GroupConversationItem key={conversations.conversation._id} id={conversations.conversation._id} name={ conversations.conversation.name || ""} lastMessageContent={conversations.lastMessage?.content} lastMessageSender={conversations.lastMessage?.sender} unseenCount={conversations.unseenCount}/>) : (
         <DMConversationItem key={conversations.conversation._id} id={conversations.conversation._id} username={ conversations.otherMember?.username || ""} imageUrl={conversations.otherMember?.imageUrl || ""} lastMessageContent={conversations.lastMessage?.content} lastMessageSender={conversations.lastMessage?.sender} unseenCount={conversations.unseenCount} />
       )
-     }) : <Loader2/> }</ItemList>
+     }) : <ClipLoader />}</ItemList>
      {children}
     </>
   

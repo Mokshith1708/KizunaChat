@@ -60,9 +60,8 @@ const handleInputChange = (event:any)=>{
   })
   }
   return (
-   <Card className=' max-w-[93%] w-full p-2 rounded-lg relative border-2 border-[#24e0da]'><div className='flex gap-2 items-end w-full'>
+   <Card className=' max-w-[93%] w-full p-2 rounded-lg relative border-2 border-white'><div className='flex gap-2 items-end w-full'>
     <Form {...form}>
-      ,
       <form
       onSubmit={form.handleSubmit(handleSubmit)}
       className="flex gap-2 items-end w-full ">
@@ -75,7 +74,7 @@ const handleInputChange = (event:any)=>{
         </FormItem>
       }} />
 
-     <Button disabled={pending} size="icon" type="submit">
+     <Button disabled={pending} size="icon" type="submit" className=' bg-green-500 border-2 border-white'>
       <SendHorizonal />
      </Button>
       </form>

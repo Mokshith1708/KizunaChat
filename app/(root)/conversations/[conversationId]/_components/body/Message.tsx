@@ -1,5 +1,5 @@
 import React from 'react';
-import { format } from 'date-fns';
+import { format, isToday, isYesterday } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -26,27 +26,50 @@ const Message = ({
 }: Props) => {
 
     const formatTime = (timestamp: number) => {
-        return format(timestamp, "HH:mm");
+        const date = new Date(timestamp);
+        if (isToday(date)) {
+            return format(date, "p"); // Just time
+        } else if (isYesterday(date)) {
+            return `Yesterday, ${format(date, "p")}`; // Yesterday with time
+        } else {
+            return `${format(date, "PPP")}, ${format(date, "p")}`; // Full date with time
+        }
     };
 
     return (
-        <div className={cn("flex items-end ",{"justify-end": fromCurrentUser})}>
-            <div className={cn("flex flex-col w-full mx-2 ",{"order-1 items-end":fromCurrentUser,"order-2 items-start": !fromCurrentUser})}>
-                <div className={cn("px-4 py-2 rounded-lg max-w-[70%]",{"bg-primary text-primary-foreground bg-blue-300":fromCurrentUser,"bg-secondary text-secondary-foreground bg-[#6bdaff]":!fromCurrentUser,"rounded-br-none":!lastByUser && fromCurrentUser,"rounded-bl-none":!lastByUser && !fromCurrentUser})}>
-                    {type === "text" ? <p className='text-wrap break-words whitespace-pre-wrap break-all text-black '>{content}</p>:null}
-                    <p className={cn("text-xs flex w-full my-1",{"text-primary-foreground justify-end text-black":fromCurrentUser, "text-secondary-foreground justify-start text-black":!fromCurrentUser} )}>
+        <div className={cn("flex items-start", {"justify-end": fromCurrentUser})}>
+            <div className={cn("flex flex-col w-full mx-2", {
+                "order-1 items-end": fromCurrentUser,
+                "order-2 items-start": !fromCurrentUser
+            })}>
+                <div className={cn("px-4 py-2 rounded-lg max-w-[70%] relative", {
+                    "bg-blue-500 text-white": fromCurrentUser,
+                    "bg-red-400 text-white": !fromCurrentUser,
+                    "rounded-br-none": !lastByUser && fromCurrentUser,
+                    "rounded-bl-none": !lastByUser && !fromCurrentUser,
+                    "shadow-md": true
+                })}>
+                    <p className={cn("text-xs font-medium mb-1", {
+                        "text-white text-right": fromCurrentUser,
+                        "text-white text-left": !fromCurrentUser
+                    })}>
                         {formatTime(createdAt)}
+                    </p>
+
+                    <p className={cn("text-base whitespace-pre-wrap break-words")}>
+                        {type === "text" ? content.join(' ') : null}
                     </p>
                 </div>
                 {seen}
             </div>
 
-            <Avatar className={cn("realtive w-8 h-8",{"order-2":fromCurrentUser,
-                "order-1":!fromCurrentUser,
-                "invisible":lastByUser
+            <Avatar className={cn("relative w-8 h-8 ml-2", {
+                "order-2": fromCurrentUser,
+                "order-1": !fromCurrentUser,
+                "invisible": lastByUser
             })}>
                 <AvatarImage src={senderImage} />
-                <AvatarFallback>{senderName.substring(0,1)}</AvatarFallback>
+                <AvatarFallback>{senderName.substring(0, 1)}</AvatarFallback>
             </Avatar>
         </div>
     );

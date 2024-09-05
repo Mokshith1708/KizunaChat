@@ -11,6 +11,7 @@ import ChatInput from './_components/input/ChatInput';
 import RemoveFriendDialog from './_components/dialogs/RemoveFriendDialog';
 import DeleteGroupDialog from './_components/dialogs/DeleteGroupDialog';
 import LeaveGroupDialog from './_components/dialogs/LeaveGroupDialog';
+import { ClipLoader } from 'react-spinners';
 
 type Props = {
   params: {
@@ -35,7 +36,7 @@ const ConversationPage = ({params: {conversationId}}: Props) => {
   const [callType, setCallType] = useState<"audio" | "video" | null>(null) ;
 
   return conversation === undefined ?
-  <div className='w-full h-full flex items-center justify-center'><Loader2 className='h-8 w-8'/></div>:
+  <div className='w-full h-full flex items-center justify-center'><ClipLoader size={50 } color="#ffffff" className='h-8 w-8 '/></div>:
   conversation === null ? <p className='w-full h-full flex items-center justify-center'>
     Conversation not found
   </p>: (
