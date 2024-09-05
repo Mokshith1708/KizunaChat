@@ -144,7 +144,7 @@ Integrated a ChatGPT-based bot from Botpress Webchat through APIs for general in
 Integrated ZEGOCLOUD UIKit for video and audio calling. Note that the integration is limited to a certain amount of call time.
 
 ## Deployment
-Guess what the project is deployed!! the project can be accessed at [Link](kizuna-chat.vercel.app)
+Guess what the project is deployed!! the project can be accessed at "kizuna-chat.vercel.app"
 . 
 
 ## Contributing
