@@ -1,5 +1,5 @@
 ### Name: Tanguturi Mokshith Reddy
-### University: Indian Institute of Technology, Tirupati
+### University: IIT Tirupati
 ### Department: Computer Science and Engineering
 
 # KizunaChat - A Messaging Service Prototype Web App
