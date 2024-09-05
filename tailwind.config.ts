@@ -15,8 +15,17 @@ const config: Config = {
                 'slack-purple-gradient': 'linear-gradient(to bottom, #4A154B, #3E1241, #321037, #290E2E, #200C25, #16091B)',
                 'complementary-blue-gradient': 'linear-gradient(to bottom, #0033A0, #002C8C, #00246E, #001D57, #001746, #000F35)',
 				'mint-gradient': 'linear-gradient(to bottom, #98FF98, #7BCC7B, #5B8A5B, #3F6F3F)',
-				 'grey-gradient': 'linear-gradient(to bottom,#16181b, #212529, #343a40)'
+				 'grey-gradient': 'linear-gradient(to bottom,#16181b, #212529, #343a40)',
+                 
             },
+            borderColor: {
+                'yellow-light': 'rgba(255, 255, 0, 0.5)', // Light yellow border
+                'yellow-dark': 'rgba(255, 255, 0, 0.7)',  // Darker yellow border on hover
+              },
+              boxShadow: {
+                'white-lg': '0 4px 6px rgba(255, 255, 255, 0.5), 0 1px 3px rgba(255, 255, 255, 0.1)',
+                'white-2xl': '0 10px 15px rgba(255, 255, 255, 0.5), 0 4px 6px rgba(255, 255, 255, 0.1)',
+              },
             borderRadius: {
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',

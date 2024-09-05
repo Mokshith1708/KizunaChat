@@ -32,9 +32,9 @@ const Message = ({
     return (
         <div className={cn("flex items-end ",{"justify-end": fromCurrentUser})}>
             <div className={cn("flex flex-col w-full mx-2 ",{"order-1 items-end":fromCurrentUser,"order-2 items-start": !fromCurrentUser})}>
-                <div className={cn("px-4 py-2 rounded-lg max-w-[70%]",{"bg-primary text-primary-foreground bg-[#FFF3C7]":fromCurrentUser,"bg-secondary text-secondary-foreground bg-[#FC819E]":!fromCurrentUser,"rounded-br-none":!lastByUser && fromCurrentUser,"rounded-bl-none":!lastByUser && !fromCurrentUser})}>
-                    {type === "text" ? <p className='text-wrap break-words whitespace-pre-wrap break-all '>{content}</p>:null}
-                    <p className={cn("text-xs flex w-full my-1",{"text-primary-foreground justify-end":fromCurrentUser, "text-secondary-foreground justify-start":!fromCurrentUser} )}>
+                <div className={cn("px-4 py-2 rounded-lg max-w-[70%]",{"bg-primary text-primary-foreground bg-blue-300":fromCurrentUser,"bg-secondary text-secondary-foreground bg-[#6bdaff]":!fromCurrentUser,"rounded-br-none":!lastByUser && fromCurrentUser,"rounded-bl-none":!lastByUser && !fromCurrentUser})}>
+                    {type === "text" ? <p className='text-wrap break-words whitespace-pre-wrap break-all text-black '>{content}</p>:null}
+                    <p className={cn("text-xs flex w-full my-1",{"text-primary-foreground justify-end text-black":fromCurrentUser, "text-secondary-foreground justify-start text-black":!fromCurrentUser} )}>
                         {formatTime(createdAt)}
                     </p>
                 </div>

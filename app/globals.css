@@ -28,6 +28,20 @@ overflow: hidden;
   }
 }
 
+/* globals.css */
+.shadow-white-lg {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5), 0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+/* globals.css */
+.border-yellow-light {
+  border-color: rgba(255, 255, 0, 0.5); /* Light yellow border */
+}
+
+.border-yellow-dark {
+  border-color: rgba(255, 255, 0, 0.7); /* Darker yellow border on hover */
+}
+
 
 @layer base {
   :root {
