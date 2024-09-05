@@ -1,3 +1,7 @@
+# Name: Tanguturi Mokshith Reddy
+# University: Indian Institute of Technology Tirupati
+# Department: Computer Science and Engineering
+
 # KizunaChat - A Messaging Service Prototype Web App
 
 KizunaChat, derived from 'kizuna' (connect or bond in Japanese), is a web-based chat application designed to connect users. It is a messaging service prototype featuring user authentication, real-time messaging, group chat, and optional features such as AI-powered chatbots and video/audio calls.
